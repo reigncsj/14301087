@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="fooTarget" class="Aopproxy.FooImpl"/>
+    <bean id="myAdvice" class="Aopproxy.PrintBeforeAdvice"/>
+    <bean id="foo" class="Aopproxy.ProxyFactoryBean">
+     <property name="proxyInterfaces">
+       <value>FooInterface</value>
+     </property>
+     <property name="target">
+       <ref local="fooTarget"/>
+     </property>
+     <property name="interceptorNames">
+       <list>
+         <value>myAdvice</value>
+       </list>
+     </property>
+    </bean>
+</beans>
