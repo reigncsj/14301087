@@ -8,7 +8,7 @@ import cn.edu.bjtu.weibo.dao.impl.WeiboDAOImpl;
 import cn.edu.bjtu.weibo.model.Picture;
 import cn.edu.bjtu.weibo.service.UserSendedPictureService;
 
-public class UserSendedPictureServieImpl implements UserSendedPictureService {
+public class UserSendedPictureServiceImpl implements UserSendedPictureService {
 
 	@Override
 	public List<Picture> getUserSendedPicture(String userId, int pageIndex, int numberPerPage) {
@@ -52,6 +52,8 @@ public class UserSendedPictureServieImpl implements UserSendedPictureService {
 		
 		return l;
 	}
+	
+	
 
 	
 }
